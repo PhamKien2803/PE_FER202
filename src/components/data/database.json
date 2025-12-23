@@ -1,0 +1,100 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Inception",
+      "director": 1,
+      "genre": 1,
+      "release_year": 2010,
+      "duration": 148,
+      "poster": "cat.jpg"
+    },
+    {
+      "id": 2,
+      "title": "The Godfather",
+      "director": 2,
+      "genre": 2,
+      "release_year": 1972,
+      "duration": 175,
+      "poster": "cat2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Parasite",
+      "director": 3,
+      "genre": 3,
+      "release_year": 2019,
+      "duration": 132,
+      "poster": "cat3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Titanic",
+      "director": 4,
+      "genre": 4,
+      "release_year": 1997,
+      "duration": 195,
+      "poster": "cat4.jpg"
+    },
+    {
+      "id": null,
+      "title": "ưdqd",
+      "director": 1,
+      "genre": 2,
+      "release_year": "32131",
+      "duration": "321"
+    },
+    {
+      "id": 5,
+      "title": "sqs",
+      "director": 2,
+      "genre": 3,
+      "release_year": "3213",
+      "duration": "3213"
+    }
+  ],
+  "directors": [
+    {
+      "id": 1,
+      "name": "Christopher Nolan",
+      "nationality": "British-American",
+      "birth_year": 1970
+    },
+    {
+      "id": 2,
+      "name": "Francis Ford Coppola",
+      "nationality": "American",
+      "birth_year": 1939
+    },
+    {
+      "id": 3,
+      "name": "Bong Joon-ho",
+      "nationality": "South Korean",
+      "birth_year": 1969
+    },
+    {
+      "id": 4,
+      "name": "James Cameron",
+      "nationality": "Canadian",
+      "birth_year": 1954
+    }
+  ],
+  "genres": [
+    {
+      "id": 1,
+      "name": "Science Fiction"
+    },
+    {
+      "id": 2,
+      "name": "Crime Drama"
+    },
+    {
+      "id": 3,
+      "name": "Thriller"
+    },
+    {
+      "id": 4,
+      "name": "Romance/Drama"
+    }
+  ]
+}

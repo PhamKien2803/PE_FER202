@@ -1,0 +1,76 @@
+Sử dụng /product/${id} khi cần tham số là một phần của đường dẫn.
+Sử dụng /evaluations?studentId=${studentid} khi cần thêm thông tin để lọc hoặc truy vấn,
+ và backend yêu cầu thông qua query string.
+
+Link: Chuỗi rỗng ("") or null vì chỉ chọn được một giá trị duy nhất.
+Checkbox: Mảng rỗng ([]) vì cần chọn được nhiều giá trị cùng lúc.
+
+ Status API:
+
+ CREATE: 201
+ GET, UPDATE, DELETE: 200
+
+ //Hàm CRUD axios
+ CREATE : POST
+ UPDATE: PUT
+ DELETE: DELETE
+ GET: GET
+
+
+SETUP index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+axios.defaults.baseURL = "http://localhost:9999";
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+
+SETUP App.js 
+==> (Nếu đề yêu cầu có Router thì setup như dưới):
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route exact={true} path="/" element={<TodoList />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
+
+
+==> (Nếu đề không yêu cầu có Router thì setup như dưới):
+
+
+function App() {
+  return (
+    <>
+        {* Gọi Components vào đây *} vidu: <TodoList />
+    </>
+  );
+}
+
+export default App;
+
+Lưu ý !: 
+==> Bắt đầu từ Kì FALL24_BL5 chuyển sang dùng version node 22.11.0
+==> Setup xong trên resource của khaothi cung cấp, (" npm i ") node_module luôn tại nhà
+==> Vào thi chạy json-server trước (" json-server --watch database.json --port 9999 ") => luôn chạy ở cổng 9999
+==> Rồi (" npm start ") => chạy project => Làm bài
+
+Nộp Bài :
+=> Làm xong nhờ Save code => Ctrl + S nhiều lần để đảm bảo code đã được lưu
+=> Tắt VS Code rồi quay vào folder bài của mình và xóa node_module
+=> Sau khi xóa xong quay trở lại phần mềm thi (" PEA ") => chọn và nộp file (" resource ") => Submit Successfull => PASSED FER202 !!!
